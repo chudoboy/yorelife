@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изображение на весь экран</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #popup {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #chudo-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #chudo {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<img src="https://media.giphy.com/media/1DtxgR0UBkxX2/giphy.gif" alt="Изображение на весь экран">
+
+<p>ЭТО ТЫ</p>
+
+<div id="popup-container">
+    <div id="popup">
+        <p>COCИ </p>
+    </div>
+</div>
+
+<script>
+    setTimeout(showPopup, 3000);
+
+    function showPopup() {
+        document.getElementById('popup-container').style.display = 'flex';
+    }
+</script>
+
+<div id="chudo-container">
+    <div id="chudo">
+        <p>ЛОХ</p>
+    </div>
+</div>
+
+<script>
+    setTimeout(showchudo, 4000)
+
+    function showchudo() {
+        document.getElementById('chudo-container').style.display = 'flex';
+    }
+</script>
+</body>
+
+</html>
